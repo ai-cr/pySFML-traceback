@@ -1,0 +1,1256 @@
+(venv) PS D:\trading_bot\app_creator\venv\python-sfml> pip install .
+Processing d:\trading_bot\app_creator\venv\python-sfml
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: Cython in d:\trading_bot\app_creator\venv\lib\site-packages (from pySFML==2.3.2.dev1) (3.0.10)
+Building wheels for collected packages: pySFML
+  Building wheel for pySFML (setup.py) ... error
+  error: subprocess-exited-with-error
+
+  × python setup.py bdist_wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [1238 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build\lib.win-amd64-cpython-312
+      creating build\lib.win-amd64-cpython-312\sfml
+      copying src\sfml\__init__.py -> build\lib.win-amd64-cpython-312\sfml
+      copying src\sfml\sf.py -> build\lib.win-amd64-cpython-312\sfml
+      running build_ext
+      Compiling src\sfml\system\system.pyx because it changed.
+      [1/1] Cythonizing src\sfml\system\system.pyx
+      D:\trading_bot\app_creator\venv\Lib\site-packages\Cython\Compiler\Main.py:381: FutureWarning: Cython directive 'language_level' not set, using '3str' for now (Py3). This has changed from earlier releases! File: D:\trading_bot\app_creator\venv\python-sfml\src\sfml\system\system.pyx
+        tree = Parsing.p_module(s, pxd, full_module_name)
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      # license.
+
+      from sfml cimport Time
+
+      cdef extern from "SFML/System.hpp" namespace "sf::Time":
+          cdef Time Zero
+               ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\Time.pxd:10:9: 'Time' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      # license.
+
+      from sfml cimport Time
+
+      cdef extern from "SFML/System.hpp" namespace "sf::Time":
+          cdef Time Zero
+               ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\time.pxd:10:9: 'Time' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+
+      from libcpp.vector cimport vector
+      from sfml cimport VideoMode
+
+      cdef extern from "SFML/Graphics.hpp" namespace "sf::VideoMode":
+          cdef VideoMode& getDesktopMode()
+               ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\VideoMode.pxd:11:9: 'VideoMode' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      from libcpp.vector cimport vector
+      from sfml cimport VideoMode
+
+      cdef extern from "SFML/Graphics.hpp" namespace "sf::VideoMode":
+          cdef VideoMode& getDesktopMode()
+          cdef const vector[VideoMode]& getFullscreenModes()
+                            ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\VideoMode.pxd:12:22: unknown type in template argument
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+
+      from libcpp.vector cimport vector
+      from sfml cimport VideoMode
+
+      cdef extern from "SFML/Graphics.hpp" namespace "sf::VideoMode":
+          cdef VideoMode& getDesktopMode()
+               ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\videomode.pxd:11:9: 'VideoMode' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      from libcpp.vector cimport vector
+      from sfml cimport VideoMode
+
+      cdef extern from "SFML/Graphics.hpp" namespace "sf::VideoMode":
+          cdef VideoMode& getDesktopMode()
+          cdef const vector[VideoMode]& getFullscreenModes()
+                            ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\videomode.pxd:12:22: unknown type in template argument
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      # Copyright (c) 2012-2017, Jonathan De Wachter <dewachter.jonathan@gmail.com>
+      #
+      # This file is part of PySFML project and is available under the zlib
+      # license.
+
+      from sfml cimport String
+      ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\joystick.pxd:7:0: 'sfml\String.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              PovX
+              PovY
+
+          cdef struct Identification:
+              Identification()
+              String name
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\joystick.pxd:28:8: 'String' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      # Copyright (c) 2012-2017, Jonathan De Wachter <dewachter.jonathan@gmail.com>
+      #
+      # This file is part of PySFML project and is available under the zlib
+      # license.
+
+      from sfml cimport Vector2i
+      ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\mouse.pxd:7:0: 'sfml\Vector2i.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      #
+      # This file is part of PySFML project and is available under the zlib
+      # license.
+
+      from sfml cimport Vector2i
+      from sfml cimport Window
+      ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\mouse.pxd:8:0: 'sfml\Window.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+          cdef enum Wheel:
+              VerticalWheel
+              HorizontalWheel
+
+          bint isButtonPressed(Button)
+          Vector2i getPosition()
+          ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\mouse.pxd:24:4: 'Vector2i' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              VerticalWheel
+              HorizontalWheel
+
+          bint isButtonPressed(Button)
+          Vector2i getPosition()
+          Vector2i getPosition(const Window&)
+          ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\mouse.pxd:25:4: 'Vector2i' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              VerticalWheel
+              HorizontalWheel
+
+          bint isButtonPressed(Button)
+          Vector2i getPosition()
+          Vector2i getPosition(const Window&)
+                                     ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\mouse.pxd:25:31: 'Window' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              HorizontalWheel
+
+          bint isButtonPressed(Button)
+          Vector2i getPosition()
+          Vector2i getPosition(const Window&)
+          void setPosition(const Vector2i&)
+                                 ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\mouse.pxd:26:27: 'Vector2i' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+
+          bint isButtonPressed(Button)
+          Vector2i getPosition()
+          Vector2i getPosition(const Window&)
+          void setPosition(const Vector2i&)
+          void setPosition(const Vector2i&, const Window&)
+                                 ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\mouse.pxd:27:27: 'Vector2i' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+
+          bint isButtonPressed(Button)
+          Vector2i getPosition()
+          Vector2i getPosition(const Window&)
+          void setPosition(const Vector2i&)
+          void setPosition(const Vector2i&, const Window&)
+                                                  ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\mouse.pxd:27:44: 'Window' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      from sfml cimport Vector2i
+      from sfml cimport Window
+
+      cdef extern from "SFML/Window.hpp" namespace "sf::Touch":
+          bint isDown(unsigned int)
+          Vector2i getPosition(unsigned int)
+          ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\touch.pxd:12:4: 'Vector2i' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      from sfml cimport Window
+
+      cdef extern from "SFML/Window.hpp" namespace "sf::Touch":
+          bint isDown(unsigned int)
+          Vector2i getPosition(unsigned int)
+          Vector2i getPosition(unsigned int, const Window&)
+          ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\touch.pxd:13:4: 'Vector2i' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      from sfml cimport Window
+
+      cdef extern from "SFML/Window.hpp" namespace "sf::Touch":
+          bint isDown(unsigned int)
+          Vector2i getPosition(unsigned int)
+          Vector2i getPosition(unsigned int, const Window&)
+                                                   ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\touch.pxd:13:45: 'Window' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+      # Copyright (c) 2012-2017, Jonathan De Wachter <dewachter.jonathan@gmail.com>
+      #
+      # This file is part of PySFML project and is available under the zlib
+      # license.
+
+      from sfml cimport Vector3f
+      ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sensor.pxd:7:0: 'sfml\Vector3f.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Orientation
+              Count
+
+          bint isAvailable(Type)
+          void setEnabled(Type, bint)
+          Vector3f getValue(Type)
+          ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sensor.pxd:22:4: 'Vector3f' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Context(const ContextSettings&, unsigned int, unsigned int height)
+
+          cdef cppclass GlResource:
+              GlResource()
+
+      cimport blendmode, primitivetype, texture, shader, font, text, renderstates, transform
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:290:8: 'blendmode.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Context(const ContextSettings&, unsigned int, unsigned int height)
+
+          cdef cppclass GlResource:
+              GlResource()
+
+      cimport blendmode, primitivetype, texture, shader, font, text, renderstates, transform
+                         ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:290:19: 'primitivetype.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Context(const ContextSettings&, unsigned int, unsigned int height)
+
+          cdef cppclass GlResource:
+              GlResource()
+
+      cimport blendmode, primitivetype, texture, shader, font, text, renderstates, transform
+                                        ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:290:34: 'texture.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Context(const ContextSettings&, unsigned int, unsigned int height)
+
+          cdef cppclass GlResource:
+              GlResource()
+
+      cimport blendmode, primitivetype, texture, shader, font, text, renderstates, transform
+                                                 ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:290:43: 'shader.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Context(const ContextSettings&, unsigned int, unsigned int height)
+
+          cdef cppclass GlResource:
+              GlResource()
+
+      cimport blendmode, primitivetype, texture, shader, font, text, renderstates, transform
+                                                         ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:290:51: 'font.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Context(const ContextSettings&, unsigned int, unsigned int height)
+
+          cdef cppclass GlResource:
+              GlResource()
+
+      cimport blendmode, primitivetype, texture, shader, font, text, renderstates, transform
+                                                               ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:290:57: 'text.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Context(const ContextSettings&, unsigned int, unsigned int height)
+
+          cdef cppclass GlResource:
+              GlResource()
+
+      cimport blendmode, primitivetype, texture, shader, font, text, renderstates, transform
+                                                                     ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:290:63: 'renderstates.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Context(const ContextSettings&, unsigned int, unsigned int height)
+
+          cdef cppclass GlResource:
+              GlResource()
+
+      cimport blendmode, primitivetype, texture, shader, font, text, renderstates, transform
+                                                                                   ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:290:77: 'transform.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              BlendMode(blendmode.Factor, blendmode.Factor)
+              BlendMode(blendmode.Factor, blendmode.Factor, blendmode.Equation)
+              BlendMode(blendmode.Factor, blendmode.Factor, blendmode.Equation, blendmode.Factor, blendmode.Factor, blendmode.Equation)
+              bint operator==(BlendMode&)
+              bint operator!=(BlendMode&)
+              blendmode.Factor colorSrcFactor
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:356:8: 'Factor' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              BlendMode(blendmode.Factor, blendmode.Factor, blendmode.Equation)
+              BlendMode(blendmode.Factor, blendmode.Factor, blendmode.Equation, blendmode.Factor, blendmode.Factor, blendmode.Equation)
+              bint operator==(BlendMode&)
+              bint operator!=(BlendMode&)
+              blendmode.Factor colorSrcFactor
+              blendmode.Factor colorDstFactor
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:357:8: 'Factor' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              BlendMode(blendmode.Factor, blendmode.Factor, blendmode.Equation, blendmode.Factor, blendmode.Factor, blendmode.Equation)
+              bint operator==(BlendMode&)
+              bint operator!=(BlendMode&)
+              blendmode.Factor colorSrcFactor
+              blendmode.Factor colorDstFactor
+              blendmode.Equation colorEquation
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:358:8: 'Equation' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              bint operator==(BlendMode&)
+              bint operator!=(BlendMode&)
+              blendmode.Factor colorSrcFactor
+              blendmode.Factor colorDstFactor
+              blendmode.Equation colorEquation
+              blendmode.Factor alphaSrcFactor
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:359:8: 'Factor' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              bint operator!=(BlendMode&)
+              blendmode.Factor colorSrcFactor
+              blendmode.Factor colorDstFactor
+              blendmode.Equation colorEquation
+              blendmode.Factor alphaSrcFactor
+              blendmode.Factor alphaDstFactor
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:360:8: 'Factor' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              blendmode.Factor colorSrcFactor
+              blendmode.Factor colorDstFactor
+              blendmode.Equation colorEquation
+              blendmode.Factor alphaSrcFactor
+              blendmode.Factor alphaDstFactor
+              blendmode.Equation alphaEquation
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:361:8: 'Equation' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              bint loadFromStream(InputStream&)
+              Glyph& getGlyph(Uint32, unsigned int, bint) const
+              int getKerning(Uint32, Uint32, unsigned int) const
+              int getLineSpacing(unsigned int) const
+              const Texture& getTexture(unsigned int) const
+              font.Info& getInfo() const
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:431:8: 'Info' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              #const Vertex& operator[] (unsigned int) const
+              void clear()
+              void resize(unsigned int)
+              void append(const Vertex)
+              void setPrimitiveType(primitivetype.PrimitiveType)
+              primitivetype.PrimitiveType getPrimitiveType() const
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:587:8: 'PrimitiveType' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              void display()
+              const Texture& getTexture() const
+
+
+      from libcpp.string cimport string
+      cimport listener, soundsource, soundrecorder, soundstream
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:677:8: 'listener.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              void display()
+              const Texture& getTexture() const
+
+
+      from libcpp.string cimport string
+      cimport listener, soundsource, soundrecorder, soundstream
+                        ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:677:18: 'soundsource.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              void display()
+              const Texture& getTexture() const
+
+
+      from libcpp.string cimport string
+      cimport listener, soundsource, soundrecorder, soundstream
+                                     ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:677:31: 'soundrecorder.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              void display()
+              const Texture& getTexture() const
+
+
+      from libcpp.string cimport string
+      cimport listener, soundsource, soundrecorder, soundstream
+                                                    ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:677:46: 'soundstream.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              void setLoop(bint)
+              void setPlayingOffset(Time)
+              const SoundBuffer* getBuffer() const
+              bint getLoop() const
+              Time getPlayingOffset() const
+              soundsource.Status getStatus() const
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:724:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              void play()
+              void pause()
+              void stop()
+              unsigned int getChannelCount() const
+              unsigned int getSampleRate() const
+              soundsource.Status getStatus() const
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:733:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+          cdef cppclass SoundBufferRecorder:
+              SoundBufferRecorder()
+              const SoundBuffer& getBuffer() const
+
+
+      cimport ipaddress, socket, udpsocket, ftp, http
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:759:8: 'ipaddress.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+          cdef cppclass SoundBufferRecorder:
+              SoundBufferRecorder()
+              const SoundBuffer& getBuffer() const
+
+
+      cimport ipaddress, socket, udpsocket, ftp, http
+                         ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:759:19: 'socket.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+          cdef cppclass SoundBufferRecorder:
+              SoundBufferRecorder()
+              const SoundBuffer& getBuffer() const
+
+
+      cimport ipaddress, socket, udpsocket, ftp, http
+                                 ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:759:27: 'udpsocket.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+          cdef cppclass SoundBufferRecorder:
+              SoundBufferRecorder()
+              const SoundBuffer& getBuffer() const
+
+
+      cimport ipaddress, socket, udpsocket, ftp, http
+                                            ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:759:38: 'ftp.pxd' not found
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              bint isBlocking() const
+
+          cdef cppclass TcpListener:
+              TcpListener()
+              unsigned short getLocalPort() const
+              socket.Status listen(unsigned short)
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:791:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+          cdef cppclass TcpListener:
+              TcpListener()
+              unsigned short getLocalPort() const
+              socket.Status listen(unsigned short)
+              void close()
+              socket.Status accept(TcpSocket&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:793:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+          cdef cppclass TcpSocket:
+              TcpSocket()
+              unsigned short getLocalPort() const
+              IpAddress getRemoteAddress() const
+              unsigned short getRemotePort() const
+              socket.Status connect(const IpAddress&, unsigned short) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:800:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              TcpSocket()
+              unsigned short getLocalPort() const
+              IpAddress getRemoteAddress() const
+              unsigned short getRemotePort() const
+              socket.Status connect(const IpAddress&, unsigned short) nogil
+              socket.Status connect(const IpAddress&, unsigned short, Time) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:801:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              IpAddress getRemoteAddress() const
+              unsigned short getRemotePort() const
+              socket.Status connect(const IpAddress&, unsigned short) nogil
+              socket.Status connect(const IpAddress&, unsigned short, Time) nogil
+              void disconnect()
+              socket.Status send(const void*, size_t) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:803:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              unsigned short getRemotePort() const
+              socket.Status connect(const IpAddress&, unsigned short) nogil
+              socket.Status connect(const IpAddress&, unsigned short, Time) nogil
+              void disconnect()
+              socket.Status send(const void*, size_t) nogil
+              socket.Status send(Packet&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:804:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              socket.Status connect(const IpAddress&, unsigned short) nogil
+              socket.Status connect(const IpAddress&, unsigned short, Time) nogil
+              void disconnect()
+              socket.Status send(const void*, size_t) nogil
+              socket.Status send(Packet&) nogil
+              socket.Status receive(const void*, size_t, size_t&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:805:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              socket.Status connect(const IpAddress&, unsigned short, Time) nogil
+              void disconnect()
+              socket.Status send(const void*, size_t) nogil
+              socket.Status send(Packet&) nogil
+              socket.Status receive(const void*, size_t, size_t&) nogil
+              socket.Status receive(Packet&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:806:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              socket.Status receive(Packet&) nogil
+
+          cdef cppclass UdpSocket:
+              UdpSocket()
+              unsigned short getLocalPort() const
+              socket.Status bind(unsigned short)
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:811:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+          cdef cppclass UdpSocket:
+              UdpSocket()
+              unsigned short getLocalPort() const
+              socket.Status bind(unsigned short)
+              void unbind()
+              socket.Status send(const void*, size_t, const IpAddress&, unsigned short)
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:813:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              UdpSocket()
+              unsigned short getLocalPort() const
+              socket.Status bind(unsigned short)
+              void unbind()
+              socket.Status send(const void*, size_t, const IpAddress&, unsigned short)
+              socket.Status send(Packet&, const IpAddress&, unsigned short)
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:814:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              unsigned short getLocalPort() const
+              socket.Status bind(unsigned short)
+              void unbind()
+              socket.Status send(const void*, size_t, const IpAddress&, unsigned short)
+              socket.Status send(Packet&, const IpAddress&, unsigned short)
+              socket.Status receive(void*, size_t, size_t&, IpAddress&, unsigned short&)
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:815:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              socket.Status bind(unsigned short)
+              void unbind()
+              socket.Status send(const void*, size_t, const IpAddress&, unsigned short)
+              socket.Status send(Packet&, const IpAddress&, unsigned short)
+              socket.Status receive(void*, size_t, size_t&, IpAddress&, unsigned short&)
+              socket.Status receive(Packet&, size_t&, IpAddress&, unsigned short&)
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:816:8: 'Status' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              bint wait(Time) nogil
+              bint isReady(Socket&) const
+
+          cdef cppclass Ftp:
+              Ftp()
+              ftp.Response connect(const IpAddress&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:830:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              bint isReady(Socket&) const
+
+          cdef cppclass Ftp:
+              Ftp()
+              ftp.Response connect(const IpAddress&) nogil
+              ftp.Response connect(const IpAddress&, unsigned short) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:831:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+
+          cdef cppclass Ftp:
+              Ftp()
+              ftp.Response connect(const IpAddress&) nogil
+              ftp.Response connect(const IpAddress&, unsigned short) nogil
+              ftp.Response connect(const IpAddress&, unsigned short, Time) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:832:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+          cdef cppclass Ftp:
+              Ftp()
+              ftp.Response connect(const IpAddress&) nogil
+              ftp.Response connect(const IpAddress&, unsigned short) nogil
+              ftp.Response connect(const IpAddress&, unsigned short, Time) nogil
+              ftp.Response disconnect()
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:833:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Ftp()
+              ftp.Response connect(const IpAddress&) nogil
+              ftp.Response connect(const IpAddress&, unsigned short) nogil
+              ftp.Response connect(const IpAddress&, unsigned short, Time) nogil
+              ftp.Response disconnect()
+              ftp.Response login() nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:834:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.Response connect(const IpAddress&) nogil
+              ftp.Response connect(const IpAddress&, unsigned short) nogil
+              ftp.Response connect(const IpAddress&, unsigned short, Time) nogil
+              ftp.Response disconnect()
+              ftp.Response login() nogil
+              ftp.Response login(const char*&, const char*&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:835:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.Response connect(const IpAddress&, unsigned short) nogil
+              ftp.Response connect(const IpAddress&, unsigned short, Time) nogil
+              ftp.Response disconnect()
+              ftp.Response login() nogil
+              ftp.Response login(const char*&, const char*&) nogil
+              ftp.Response keepAlive() nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:836:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.Response connect(const IpAddress&, unsigned short, Time) nogil
+              ftp.Response disconnect()
+              ftp.Response login() nogil
+              ftp.Response login(const char*&, const char*&) nogil
+              ftp.Response keepAlive() nogil
+              ftp.DirectoryResponse getWorkingDirectory() nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:837:8: 'DirectoryResponse' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.Response disconnect()
+              ftp.Response login() nogil
+              ftp.Response login(const char*&, const char*&) nogil
+              ftp.Response keepAlive() nogil
+              ftp.DirectoryResponse getWorkingDirectory() nogil
+              ftp.ListingResponse getDirectoryListing() nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:838:8: 'ListingResponse' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.Response login() nogil
+              ftp.Response login(const char*&, const char*&) nogil
+              ftp.Response keepAlive() nogil
+              ftp.DirectoryResponse getWorkingDirectory() nogil
+              ftp.ListingResponse getDirectoryListing() nogil
+              ftp.ListingResponse getDirectoryListing(const char*&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:839:8: 'ListingResponse' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.Response login(const char*&, const char*&) nogil
+              ftp.Response keepAlive() nogil
+              ftp.DirectoryResponse getWorkingDirectory() nogil
+              ftp.ListingResponse getDirectoryListing() nogil
+              ftp.ListingResponse getDirectoryListing(const char*&) nogil
+              ftp.Response changeDirectory(const char*&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:840:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.Response keepAlive() nogil
+              ftp.DirectoryResponse getWorkingDirectory() nogil
+              ftp.ListingResponse getDirectoryListing() nogil
+              ftp.ListingResponse getDirectoryListing(const char*&) nogil
+              ftp.Response changeDirectory(const char*&) nogil
+              ftp.Response parentDirectory() nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:841:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.DirectoryResponse getWorkingDirectory() nogil
+              ftp.ListingResponse getDirectoryListing() nogil
+              ftp.ListingResponse getDirectoryListing(const char*&) nogil
+              ftp.Response changeDirectory(const char*&) nogil
+              ftp.Response parentDirectory() nogil
+              ftp.Response createDirectory(const char*&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:842:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.ListingResponse getDirectoryListing() nogil
+              ftp.ListingResponse getDirectoryListing(const char*&) nogil
+              ftp.Response changeDirectory(const char*&) nogil
+              ftp.Response parentDirectory() nogil
+              ftp.Response createDirectory(const char*&) nogil
+              ftp.Response deleteDirectory(const char*&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:843:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.ListingResponse getDirectoryListing(const char*&) nogil
+              ftp.Response changeDirectory(const char*&) nogil
+              ftp.Response parentDirectory() nogil
+              ftp.Response createDirectory(const char*&) nogil
+              ftp.Response deleteDirectory(const char*&) nogil
+              ftp.Response renameFile(const char*&, const char*&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:844:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.Response changeDirectory(const char*&) nogil
+              ftp.Response parentDirectory() nogil
+              ftp.Response createDirectory(const char*&) nogil
+              ftp.Response deleteDirectory(const char*&) nogil
+              ftp.Response renameFile(const char*&, const char*&) nogil
+              ftp.Response deleteFile(const char*&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:845:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.Response parentDirectory() nogil
+              ftp.Response createDirectory(const char*&) nogil
+              ftp.Response deleteDirectory(const char*&) nogil
+              ftp.Response renameFile(const char*&, const char*&) nogil
+              ftp.Response deleteFile(const char*&) nogil
+              ftp.Response download(const char*&, const char*&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:846:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.Response createDirectory(const char*&) nogil
+              ftp.Response deleteDirectory(const char*&) nogil
+              ftp.Response renameFile(const char*&, const char*&) nogil
+              ftp.Response deleteFile(const char*&) nogil
+              ftp.Response download(const char*&, const char*&) nogil
+              ftp.Response download(const char*&, const char*&, ftp.TransferMode) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:847:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.Response deleteDirectory(const char*&) nogil
+              ftp.Response renameFile(const char*&, const char*&) nogil
+              ftp.Response deleteFile(const char*&) nogil
+              ftp.Response download(const char*&, const char*&) nogil
+              ftp.Response download(const char*&, const char*&, ftp.TransferMode) nogil
+              ftp.Response upload(const char*&, const char*&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:848:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              ftp.Response renameFile(const char*&, const char*&) nogil
+              ftp.Response deleteFile(const char*&) nogil
+              ftp.Response download(const char*&, const char*&) nogil
+              ftp.Response download(const char*&, const char*&, ftp.TransferMode) nogil
+              ftp.Response upload(const char*&, const char*&) nogil
+              ftp.Response upload(const char*&, const char*&, ftp.TransferMode) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:849:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Http()
+              Http(const string&)
+              Http(const string&, unsigned short)
+              void setHost(const string&)
+              void setHost(const string&, unsigned short)
+              http.Response sendRequest(const http.Request&) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:857:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Http()
+              Http(const string&)
+              Http(const string&, unsigned short)
+              void setHost(const string&)
+              void setHost(const string&, unsigned short)
+              http.Response sendRequest(const http.Request&) nogil
+                                              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:857:40: 'Request' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Http(const string&)
+              Http(const string&, unsigned short)
+              void setHost(const string&)
+              void setHost(const string&, unsigned short)
+              http.Response sendRequest(const http.Request&) nogil
+              http.Response sendRequest(const http.Request&, Time) nogil
+              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:858:8: 'Response' is not a type identifier
+
+      Error compiling Cython file:
+      ------------------------------------------------------------
+      ...
+              Http(const string&)
+              Http(const string&, unsigned short)
+              void setHost(const string&)
+              void setHost(const string&, unsigned short)
+              http.Response sendRequest(const http.Request&) nogil
+              http.Response sendRequest(const http.Request&, Time) nogil
+                                              ^
+      ------------------------------------------------------------
+
+      include\Includes\sfml\sfml.pxd:858:40: 'Request' is not a type identifier
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "D:\trading_bot\app_creator\venv\python-sfml\setup.py", line 192, in <module>
+          setup(
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\__init__.py", line 108, in setup
+          return distutils.core.setup(**attrs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\_distutils\core.py", line 184, in setup
+          return run_commands(dist)
+                 ^^^^^^^^^^^^^^^^^^
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\_distutils\core.py", line 200, in run_commands
+          dist.run_commands()
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\_distutils\dist.py", line 970, in run_commands
+          self.run_command(cmd)
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\dist.py", line 945, in run_command
+          super().run_command(command)
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\_distutils\dist.py", line 989, in run_command
+          cmd_obj.run()
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\command\bdist_wheel.py", line 373, in run
+          self.run_command("build")
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\_distutils\cmd.py", line 316, in run_command
+          self.distribution.run_command(command)
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\dist.py", line 945, in run_command
+          super().run_command(command)
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\_distutils\dist.py", line 989, in run_command
+          cmd_obj.run()
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\_distutils\command\build.py", line 135, in run
+          self.run_command(cmd_name)
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\_distutils\cmd.py", line 316, in run_command
+          self.distribution.run_command(command)
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\dist.py", line 945, in run_command
+          super().run_command(command)
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\_distutils\dist.py", line 989, in run_command
+          cmd_obj.run()
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\_distutils\command\build_ext.py", line 359, in run
+          self.build_extensions()
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\_distutils\command\build_ext.py", line 479, in build_extensions
+          self._build_extensions_serial()
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\setuptools\_distutils\command\build_ext.py", line 505, in _build_extensions_serial
+          self.build_extension(ext)
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\Cython\Distutils\build_ext.py", line 130, in build_extension
+          new_ext = cythonize(
+                    ^^^^^^^^^^
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\Cython\Build\Dependencies.py", line 1154, in cythonize
+          cythonize_one(*args)
+        File "D:\trading_bot\app_creator\venv\Lib\site-packages\Cython\Build\Dependencies.py", line 1321, in cythonize_one
+          raise CompileError(None, pyx_file)
+      Cython.Compiler.Errors.CompileError: src\sfml\system\system.pyx
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for pySFML
+  Running setup.py clean for pySFML
+Failed to build pySFML
+ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based projects (pySFML)
